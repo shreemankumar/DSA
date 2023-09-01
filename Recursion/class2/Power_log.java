@@ -1,6 +1,6 @@
-package Recursion.class2;
+//package Recursion.class2;
 
-import Recursion.class1.main;
+//import Recursion.class1.main;
 
 public class Power_log {
     public static int power_change_faith(int x,int n){

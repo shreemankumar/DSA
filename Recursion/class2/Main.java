@@ -1,4 +1,4 @@
-package Recursion.class2;
+//package Recursion.class2;
                     
                     //power
 

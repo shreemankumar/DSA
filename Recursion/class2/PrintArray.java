@@ -1,4 +1,4 @@
-package Recursion.class2;
+//package Recursion.class2;
 
 public class PrintArray {
     public static void printarray(int idx,int[] arr){
