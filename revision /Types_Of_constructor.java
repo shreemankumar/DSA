@@ -25,7 +25,7 @@ class type{
      }
      public void mak(){
         System.out.println("e");
-        this.make();
+        make();
     }
 }
 
