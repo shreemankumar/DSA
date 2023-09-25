@@ -6,7 +6,7 @@ class Node{
 
     public Node(int d){
     this.data=d;
-
+    this.next=null;
     }
 }
 
@@ -23,7 +23,7 @@ public class Foundation{
             tail.next=nn;
          tail=nn;
          }
-    }
+    }  
     public static void addFirst(int data){
         Node nn= new Node(data);
         if(head == null){
@@ -36,11 +36,28 @@ public class Foundation{
     }
     public static void display(){
         Node curr = head;
-        while(curr!=null){
-            System.out.println(curr.data+" ");
+        while(curr!=null){                      // to display 
+            System.out.print(curr.data+" -> ");
             curr=curr.next;
         }
+        System.out.println("null");
     } 
+    public static  Node getAt(int idx){             
+        if(idx<0){
+            System.out.println("out of range");
+            return null;
+        }
+
+        Node curr=head;
+        for(int i=0;i<idx;i++){
+            if(curr==null){
+                System.out.println("out of range");
+                return null;
+            }
+            curr=curr.next;
+        }
+        return curr;
+    }
     public static void main(String[] args) {
        head =null;
        tail=null;
@@ -52,8 +69,14 @@ public class Foundation{
             int a= sc.nextInt();
             
             addLast(a);
+            addFirst(a);
         }
         display();
-        
+
+        Node ans =getAt(5);
+        if(ans!=null){
+            System.out.println(ans.data);
+        }
+       
     }
 }
