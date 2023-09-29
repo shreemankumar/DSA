@@ -57,6 +57,7 @@ public class Ragain {
         }
         //System.out.println();
     }
+    
     public static Node Gets_At(int idx){
         if(idx<0){
             System.out.println("null");
@@ -72,6 +73,49 @@ public class Ragain {
         }
         return curr;
     }
+    public static void Add_At(int idx,int data){
+        if(idx==0){
+            Add_First(data);
+            return ;
+        }
+        Node nn=new Node(data);
+
+        Node curr=Gets_At(idx-1);
+        Node nextOfCurr =curr.next;
+
+        curr.next=nn;
+        nn.next=nextOfCurr; 
+        
+
+    }
+    public static Node Remove_Last(){
+       {
+        if(head ==null)// for size 0
+        {
+            return null;
+        }
+        else if(head ==tail) // for size 1
+        {
+            Node tr=tail;
+            Remove_First();
+            return tr;
+        }
+        else{
+             Node curr=head;
+             while(curr.next!=tail)
+             {
+                curr=curr.next;
+            }
+            curr.next=null;
+            //updating tail
+            Node tr =tail;
+            tail=curr;
+            return tr;
+        }
+        
+        }
+    }
+   
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);  
        System.out.println("Enter the size :");
@@ -90,13 +134,14 @@ public class Ragain {
         // System.out.println(head.data);
         // System.out.println(tail.data);
 
-         Display();
-        // Remove_First();
         // Display();
-       Node ans= Gets_At(-1);
-       if(ans!=null)
-         System.out.println(ans.data);
-
+         //Remove_First();
+        // Display();
+    //    Node ans= Gets_At(1);
+    //    if(ans!=null)
+    //      System.out.println(ans.data);
+         Remove_Last();
+         Display();
     }
     
 }
