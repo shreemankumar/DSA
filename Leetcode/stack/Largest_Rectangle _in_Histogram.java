@@ -1,6 +1,10 @@
 
             // leetcode 84(hard)
-
+class largestRectangleArea{
+    public static void main(String[] args) {
+        
+    }
+}
 class Solution {
     public int[] getNSERI(int[] arr, int n) {
         int[] nseri = new int[n];
