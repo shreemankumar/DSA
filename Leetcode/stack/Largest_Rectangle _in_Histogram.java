@@ -108,7 +108,8 @@ class Solution {
             maxarea = Math.max(maxarea, area);
         }
         return maxarea;
-        
+        // You can choose a different value to indicate an empty stack.
+      // You can choose a different value to indicate an empty stack.  
     }
 }
 
