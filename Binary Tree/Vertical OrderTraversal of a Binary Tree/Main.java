@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
 import javafx.geometry.Pos;
 
 import java.io.*;
@@ -30,13 +27,25 @@ class Solution {
 
         maximumpos=Math.max(pos, maximumpos);
         minimumpos=Math.min(pos, minimumpos);
-
-        return ;
+        
+        return;
     }
     List<List<Integer>> VerticalTraversal(TreeNode root) {
         //Write your code here
+        
         getwidth(root,0);
-        int width = maximumpos - minimumpos;
+        int width=maximumpos-minimumpos;
+        int level = width+1;
+
+        List<List<Integer>> vw = new ArrayList<>();
+        for(int i=0;i<level;i++){
+            vw.add(new ArrayList<>());
+        } 
+        Queue<Integer> que = new ArrayDeque<>();
+        que.add(new pair(root,minimumpos));
+
+
+    
       
 
     }
