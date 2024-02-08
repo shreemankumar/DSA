@@ -35,5 +35,13 @@ public class Main {
             System.out.print(key +",");
             System.out.println(mymap.get(key));
         }
+        //  To check weather the key is present or not   ... contain that key yes or no
+        if(mymap.containsKey(2) == false){
+            System.out.println("does not contians");
+        }
+        else{
+            System.out.println("it contians");
+        }
+
     }
 }
